@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrated Aviation AI Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #0b1a2b; color: #fff; margin: 0; }
+    header { background-color: #142f4c; padding: 20px; text-align: center; font-size: 1.5em; }
+    .container { display: flex; justify-content: space-around; padding: 20px; }
+    .panel { background-color: #1e3a5f; border-radius: 10px; padding: 15px; width: 30%; }
+    h2 { color: #00bfff; }
+    .kpi { font-size: 1.1em; margin: 10px 0; }
+    footer { background-color: #142f4c; text-align: center; padding: 10px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <header>Integrated Aviation AI Dashboard</header>
+  <div class="container">
+    <!-- NiMet Panel -->
+    <div class="panel">
+      <h2>NiMet: Weather Intelligence</h2>
+      <p class="kpi">Nowcast Accuracy: <span id="nimetAccuracy">--%</span></p>
+      <p class="kpi">Lead Time Improvement: <span id="nimetLeadTime">--%</span></p>
+      <p class="kpi">Storms Detected: <span id="nimetStorms">--</span></p>
+      <p class="kpi">Flood Alerts: <span id="nimetFloods">--</span></p>
+    </div>
+    <!-- NAMA Panel -->
+    <div class="panel">
+      <h2>NAMA: Airspace Intelligence</h2>
+      <p class="kpi">Alert Response Time: <span id="namaResponse">-- Sec</span></p>
+      <p class="kpi">Flights Rerouted: <span id="namaRerouted">--</span></p>
+      <p class="kpi">Detection-to-Alert Lag: <span id="namaLag">-- Sec</span></p>
+    </div>
+    <!-- FAAN Panel -->
+    <div class="panel">
+      <h2>FAAN: Terminal Intelligence</h2>
+      <p class="kpi">Gate Adjustments: <span id="faanGate">-- Mins</span></p>
+      <p class="kpi">Passenger Updates: <span id="faanUpdates">-- Alerts</span></p>
+      <p class="kpi">Congestion Forecast: <span id="faanCongestion">--</span></p>
+    </div>
+  </div>
+  <footer>
+    Operational Impact: Delays Avoided <span id="impactDelays">--</span> | 
+    Diversions Reduced <span id="impactDiversions">--%</span> | 
+    Cancellations Prevented <span id="impactCancellations">--%</span> | 
+    Passenger Satisfaction <span id="impactSatisfaction">--%</span>
+  </footer>
+
+  <!-- Placeholder Script for Real-Time Data -->
+  <script>
+    // Example: Replace with actual API calls later
+    function updateDashboard() {
+      document.getElementById("nimetAccuracy").innerText = "82%";
+      document.getElementById("nimetLeadTime").innerText = "+32%";
+      document.getElementById("nimetStorms").innerText = "18";
+      document.getElementById("nimetFloods").innerText = "6";
+
+      document.getElementById("namaResponse").innerText = "45 Sec";
+      document.getElementById("namaRerouted").innerText = "8";
+      document.getElementById("namaLag").innerText = "45 Sec";
+
+      document.getElementById("faanGate").innerText = "5 Mins";
+      document.getElementById("faanUpdates").innerText = "3 Alerts";
+      document.getElementById("faanCongestion").innerText = "Moderate";
+
+      document.getElementById("impactDelays").innerText = "28";
+      document.getElementById("impactDiversions").innerText = "65%";
+      document.getElementById("impactCancellations").innerText = "78%";
+      document.getElementById("impactSatisfaction").innerText = "92%";
+    }
+
+    // Simulate live updates every 10 seconds
+    setInterval(updateDashboard, 10000);
+    updateDashboard();
+  </script>
+</body>
+</html>
